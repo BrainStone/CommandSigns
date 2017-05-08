@@ -143,7 +143,8 @@ public class CommandSigns implements PluginContainer
 				.dataClass(IsOneTimeData.class)
 				.immutableClass(ImmutableIsOneTimeData.class)
 				.builder(new IsOneTimeDataBuilder())
-				.manipulatorId("is_one_time_data")
+				.manipulatorId("is_one_time")
+				.dataName("command_signs")
 				.buildAndRegister(this);
 
 		// IsCommandSign
@@ -160,7 +161,8 @@ public class CommandSigns implements PluginContainer
 				.dataClass(CommandsData.class)
 				.immutableClass(ImmutableCommandsData.class)
 				.builder(new CommandsDataBuilder())
-				.manipulatorId("commands_data")
+				.manipulatorId("commands")
+				.dataName("command_signs")
 				.buildAndRegister(this);
 		Sponge.getDataManager().register(SpongeCommandsData.class, ImmutableSpongeCommandsData.class, new CommandsDataBuilder());
 
@@ -169,7 +171,8 @@ public class CommandSigns implements PluginContainer
 				.dataClass(UsersData.class)
 				.immutableClass(ImmutableUsersData.class)
 				.builder(new UsersDataBuilder())
-				.manipulatorId("user_data")
+				.manipulatorId("user")
+				.dataName("command_signs")
 				.buildAndRegister(this);
 		Sponge.getDataManager().register(SpongeUsersData.class, ImmutableSpongeUsersData.class, new UsersDataBuilder());
 
